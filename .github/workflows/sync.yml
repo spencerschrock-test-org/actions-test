@@ -8,8 +8,7 @@ jobs:
   auto-sync-fork:
     name: Sync fork
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: write-all
     steps:
       - name: "gh repo sync"
         id: gh-repo-sync
