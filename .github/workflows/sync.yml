@@ -14,5 +14,5 @@ jobs:
         id: gh-repo-sync
         run: |
           echo ${{ github.token }} >> gh auth login --with-token
-          gh auth refresh -s workflow
+          gh auth refresh -s workflow --hostname ${{ github.server_url }}
           gh repo sync ${{ github.repository }} -b main
